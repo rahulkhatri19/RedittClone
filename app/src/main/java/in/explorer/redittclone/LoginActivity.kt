@@ -1,7 +1,6 @@
 package `in`.explorer.redittclone
 
 import android.content.res.Configuration.UI_MODE_TYPE_NORMAL
-import android.graphics.Typeface
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -28,7 +27,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
-import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterStart
 import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
@@ -45,7 +43,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import `in`.explorer.redittclone.ui.theme.RedittCloneTheme
-import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 class LoginActivity : ComponentActivity() {
 
@@ -81,14 +78,14 @@ class LoginActivity : ComponentActivity() {
                         Image(painter = painterResource(id = R.drawable.themes_icon), contentDescription = "Login main image", modifier = Modifier
                             .size(500.dp, 200.dp)
                             .padding(bottom = 10.dp))
-                        Column() {
-                            LoginButtons(modifier = Modifier.fillMaxWidth(), text = stringResource(id = R.string.continue_with_google)) {
+                        Column {
+                            LoginButtons(text = stringResource(id = R.string.continue_with_google)) {
                                 Toast.makeText(this@LoginActivity, "User clicking on button", Toast.LENGTH_SHORT).show()
                             }
-                            LoginButtons(modifier = Modifier.fillMaxSize(), text = "Continue with Apple") {
+                            LoginButtons(text = "Continue with Apple") {
                                 Toast.makeText(this@LoginActivity, "User clicking on button", Toast.LENGTH_SHORT).show()
                             }
-                            LoginButtons(modifier = Modifier.fillMaxSize(), text = "Continue with email") {
+                            LoginButtons(text = "Continue with email") {
                                 Toast.makeText(this@LoginActivity, "User clicking on button", Toast.LENGTH_SHORT).show()
                             }
                         }
@@ -113,14 +110,14 @@ class LoginActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     RedittCloneTheme {
-        LoginButtons(modifier = Modifier, "Hello Shijen", ) {
+        LoginButtons("Hello Shijen" ) {
             Log.d("Shijen", "GreetingPreview: Clicking on button")
         }
     }
 }
 
 @Composable
-fun LoginButtons( modifier: Modifier, text:String, onClick:()->Unit){
+fun LoginButtons(text: String, onClick: () -> Unit){
     Box (modifier = Modifier
         .height(60.dp)
         .padding(5.dp)
