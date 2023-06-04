@@ -1,10 +1,10 @@
 package `in`.explorer.redittclone
 
-sealed class BottomNavItem(var title:String, var icon:Int, var screen_route:String){
+sealed class BottomNavItem(var title: String, var icon: Int, var screen_route: String) {
 
-    object Home : BottomNavItem("Home", android.R.drawable.ic_menu_agenda,"home")
-    object Discover: BottomNavItem("Discover", android.R.drawable.ic_menu_slideshow,"discover")
-    object Create: BottomNavItem("Create",android.R.drawable.ic_menu_add,"create")
-    object Chat: BottomNavItem("Chat", android.R.drawable.ic_menu_agenda,"chat")
-    object Inbox: BottomNavItem("Inbox", android.R.drawable.ic_menu_slideshow,"inbox")
+    object Home : BottomNavItem("Home", R.drawable.ic_home, "home")
+    object Discover : BottomNavItem("Discover", R.drawable.ic_discover, "discover")
+    object Create : BottomNavItem("Create", R.drawable.ic_create, "create")
+    object Chat : BottomNavItem("Chat", R.drawable.ic_chat, "chat")
+    object Inbox : BottomNavItem("Inbox", R.drawable.ic_inbox, "inbox")
 }
