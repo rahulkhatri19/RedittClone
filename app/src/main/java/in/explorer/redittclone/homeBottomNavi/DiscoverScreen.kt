@@ -1,4 +1,4 @@
-package `in`.explorer.redittclone
+package `in`.explorer.redittclone.homeBottomNavi
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -25,6 +25,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import `in`.explorer.redittclone.R
 import `in`.explorer.redittclone.ui.theme.Gray20
 import `in`.explorer.redittclone.ui.theme.Gray50
 

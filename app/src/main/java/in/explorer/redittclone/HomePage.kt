@@ -27,8 +27,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
@@ -37,6 +35,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import `in`.explorer.redittclone.homeBottomNavi.BottomNavItem
+import `in`.explorer.redittclone.homeBottomNavi.ChatScreenFun
+import `in`.explorer.redittclone.homeBottomNavi.CreatePostScreenFun
+import `in`.explorer.redittclone.homeBottomNavi.DiscoverScreenFun
+import `in`.explorer.redittclone.homeBottomNavi.HomeScreenFun
+import `in`.explorer.redittclone.homeBottomNavi.InboxScreenFun
 import `in`.explorer.redittclone.ui.theme.Gray20
 import `in`.explorer.redittclone.ui.theme.RedittCloneTheme
 
@@ -53,7 +57,7 @@ class HomePage : ComponentActivity() {
 
 @Preview(device = Devices.PIXEL_4, uiMode = Configuration.UI_MODE_TYPE_NORMAL)
 @Composable
-fun homePagePreview() {
+fun HomePagePreview() {
     Column(
         Modifier
             .fillMaxWidth()
@@ -148,21 +152,7 @@ fun NavigationGraph(navController: NavHostController, paddingValues: PaddingValu
 
 @Composable
 fun HomeScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.white))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Home Screen",
-            fontWeight = FontWeight.Bold,
-            color = Color.Black,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 20.sp
-        )
-    }
+    HomeScreenFun()
 }
 
 @Composable
@@ -179,59 +169,17 @@ fun DiscoverScreen() {
 
 @Composable
 fun CreatePostScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.white))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Create Post Screen",
-            fontWeight = FontWeight.Bold,
-            color = Color.Black,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 20.sp
-        )
-    }
+    CreatePostScreenFun()
 }
 
 
 @Composable
 fun ChatScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.white))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Chat Screen",
-            fontWeight = FontWeight.Bold,
-            color = Color.Black,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 20.sp
-        )
-    }
+    ChatScreenFun()
 }
 
 
 @Composable
 fun InboxScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(colorResource(id = R.color.white))
-            .wrapContentSize(Alignment.Center)
-    ) {
-        Text(
-            text = "Inbox Screen",
-            fontWeight = FontWeight.Bold,
-            color = Color.Black,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 20.sp
-        )
-    }
+    InboxScreenFun()
 }
